@@ -1,6 +1,7 @@
-// 1. Naive Solution
-// recursion
 class Solution {
+    
+    // 1. Naive Solution
+    // recursion
     public int robNaive(TreeNode root) {
         // termination
         if (root == null) {
@@ -65,7 +66,7 @@ class Solution {
         int[] right = greedy(root.right);
         
         rst[0] = Math.max(left[0], left[1]) + Math.max(right[0], right[1]); // not chosen root
-        rst[1] = left[0] + right[0]; // chosen root
+        rst[1] = root.val + left[0] + right[0]; // chosen root
         
         return rst;
     }
