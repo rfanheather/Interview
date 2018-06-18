@@ -30,6 +30,18 @@ public class Backpack {
      * @return: The maximum value
      */
     public int backPackII(int m, int[] A, int V[]) {
+        if (m <= 0 || A == null || A.length == 0 || V == null || V.length == 0) {
+            return 0;
+        }
         
+        int[] f = new int[m + 1];
+        int len = A.length;
+        for (int i = 0; i < len; i++) {
+            for (int j = m; j >= A[i]; j--) {
+                f[j] = Math.max(f[j], f[j - A[i]] + V[i]);
+            }
+        }
+        
+        return f[m];
     }
 }
