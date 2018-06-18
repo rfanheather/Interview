@@ -55,5 +55,19 @@ public class Backpack {
         if (m <= 0 || A == null || A.length == 0 || V == null || V.length == 0) {
             return 0;
         }
+        
+        int[] f = new int[m];
+        int len = A.length;
+        
+        for (int i = 1; i <= m; i++) { // i is weight
+            for (int j = 0; j < n; j++) {
+                if (A[j] > i) {
+                    break;
+                }
+                f[i] = Math.max(f[i], f[i - A[j]] + V[j]);
+            }
+        } 
+        
+        return f[m];
     }
 }
