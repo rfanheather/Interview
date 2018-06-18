@@ -44,4 +44,16 @@ public class Backpack {
         
         return f[m];
     }
+    
+    // 给定n种具有大小 Ai 和价值 Vi 的物品(每个物品可以取用无限次)和一个大小为 m 的一个背包, 你可以放入背包里的最大价值是多少?
+    /**
+     * @param m: An integer m denotes the size of a backpack
+     * @param A & V: Given n items with size A[i] and value V[i]
+     * @return: The maximum value
+     */
+    public int backPackIII(int m, int[] A, int V[]) {
+        if (m <= 0 || A == null || A.length == 0 || V == null || V.length == 0) {
+            return 0;
+        }
+    }
 }
