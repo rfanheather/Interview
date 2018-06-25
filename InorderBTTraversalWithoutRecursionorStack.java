@@ -1,4 +1,5 @@
 // 给一个二叉树，每个node有一个指向其父节点的指针，不可以修改树，求该树所有叶子节点的和，要求o1空间
+// https://www.geeksforgeeks.org/inorder-non-threaded-binary-tree-traversal-without-recursion-or-stack/
 public class InorderBTTraversalWithoutRecursionorStack {
     public int getLeavesSum(TreeNode root) {
         if (root == null) {
