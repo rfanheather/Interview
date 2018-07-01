@@ -43,10 +43,10 @@ public class TowerOfHanoi{
      
         int numOfDisks = 3;
         for (int i = numOfDisks - 1; i >= 0; i--) {
-            towers[i].add(i);
+            towers[0].add(i);
         }
      
-        towers[i].moveToDestination(numOfDisks, towers[2], towers[1]);
+        towers[0].moveToDestination(numOfDisks, towers[2], towers[1]);
         System.out.println(towers[0]);
         System.out.println(towers[1]);
         System.out.println(towers[2]);
