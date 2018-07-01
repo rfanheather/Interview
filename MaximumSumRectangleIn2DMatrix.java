@@ -40,14 +40,11 @@ class Solution {
         rst[1] = -1;
         
         for (int i = 0; i < len; i++) {
-            if (nums[i] < 0) {
+            sum += nums[i];
+            if (sum < 0) {
                 sum = 0;
                 start = i + 1;
-            } else {
-                sum += nums[i];
-            }
-            
-            if (sum > rst[0]) {
+            } else if (sum > rst[0]) {
                 rst[0] = sum;
                 rst[1] = start;
                 rst[2] = i;
